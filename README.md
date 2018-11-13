@@ -46,5 +46,3 @@ for instance:
 3. TensorRT 5.0 GA
 4. Tensorflow 18.11-py3 from NGC
 5. Ubuntu 16.04
-
-rjeng@nvidia.com
