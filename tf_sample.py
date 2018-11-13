@@ -17,7 +17,7 @@ def load_test_case(name):
 
 def main():
   sess = tf.Session()
-  with gfile.FastGFile('baidu_tf_se-resnext.pb', 'rb') as f:
+  with gfile.FastGFile('se-resnext.pb', 'rb') as f:
       graph_def = tf.GraphDef()
       graph_def.ParseFromString(f.read())
       sess.graph.as_default()

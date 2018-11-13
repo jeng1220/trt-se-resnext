@@ -17,7 +17,7 @@ import common
 TRT_LOGGER = trt.Logger(trt.Logger.WARNING)
 
 class ModelData(object):
-  MODEL_FILE = os.path.join(os.path.dirname(__file__), "baidu_tf_se-resnext.uff")
+  MODEL_FILE = os.path.join(os.path.dirname(__file__), "se-resnext.uff")
   INPUT_NAME ="tf_feed_image"
   INPUT_SHAPE = (3, 224, 224)
   OUTPUT_NAME = "softmax"
