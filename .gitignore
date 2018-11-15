@@ -1,1 +1,4 @@
 __pycache__
+*.pb
+*.uff
+*.pyc

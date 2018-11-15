@@ -5,7 +5,7 @@ from PIL import Image
 import os
 
 def load_test_case(name):
-  img = Image.open(os.path.join(name))
+  img = Image.open(os.path.join('../data/' + name))
   # convert HWC to CHW
   planar = img.split()
   r = np.asarray(planar[0]).astype(np.float32)
@@ -17,7 +17,7 @@ def load_test_case(name):
 
 def main():
   sess = tf.Session()
-  with gfile.FastGFile('se-resnext.pb', 'rb') as f:
+  with gfile.FastGFile('../data/se-resnext.pb', 'rb') as f:
       graph_def = tf.GraphDef()
       graph_def.ParseFromString(f.read())
       sess.graph.as_default()

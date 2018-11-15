@@ -17,7 +17,7 @@ import common
 TRT_LOGGER = trt.Logger(trt.Logger.WARNING)
 
 class ModelData(object):
-  MODEL_FILE = os.path.join(os.path.dirname(__file__), "se-resnext.uff")
+  MODEL_FILE = os.path.join(os.path.dirname(__file__), "../data/se-resnext.uff")
   INPUT_NAME ="tf_feed_image"
   INPUT_SHAPE = (3, 224, 224)
   OUTPUT_NAME = "softmax"
@@ -35,7 +35,7 @@ def build_engine(model_file):
 
 # Loads a test case into the provided pagelocked_buffer.
 def load_test_case(name, pagelocked_buffer):
-  img = Image.open(os.path.join(name))
+  img = Image.open(os.path.join("../data/" + name))
   # convert HWC to CHW
   planar = img.split()
   r = np.asarray(planar[0]).astype(np.float32)
